@@ -1,0 +1,156 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+/* Regole generiche */
+body {
+    padding: 16px;
+    line-height: 1;
+    color: rgb(157, 174, 125);
+    background-color: rgb(254, 243, 240);
+    font-family: 'Ruslan Display', sans-serif;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.game-container {
+    width: 484px;
+    border: 1px rgb(73, 55, 59);
+}
+
+/* Pannello di gioco */
+
+h1 {
+    font-size: 40px;
+    color: rgb(246, 187, 190);
+    background-color: rgba(129, 120, 120, 0.668);
+    text-align: center;
+}
+
+.score {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+
+}
+
+/* Tabellla di gioco */
+
+.game-board {
+    position: relative;
+    border: 2px solid rgb(73, 55, 59);
+}
+
+.grid {
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border: 1px rgb(73, 55, 59);
+    background-color: rgba(129, 120, 120, 0.668);
+
+}
+
+.cell {
+    height: 48px;
+    width: 48px;
+    /* border: 1px dashed black; */
+}
+
+
+.cell-dark {
+
+    background-color: rgb(157, 174, 125);
+
+}
+
+.cell:hover,
+.cell-clicked {
+
+    background-color: rgb(197, 103, 66);
+}
+
+.cell-bomb {
+
+    background-color: rgb(246, 187, 190);
+    background-image: url(images/Nekuzo\ Bomb.png);
+    background-size: contain;
+
+}
+
+.cell-bonus {
+    background-color: rgb(246, 187, 190);
+    background-image: url(images/bonus.png);
+    background-size: contain;
+
+}
+
+.cell-clicked,
+.cell-bomb {
+    cursor: : not-allowed;
+}
+
+/* Schermata di fine gioco */
+
+.end-game-screen {
+    background-color: rgba(241, 117, 78, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.win {
+
+    background-color: rgba(78, 241, 187, 0.6);
+    color: rgb(73, 55, 59);
+}
+
+.end-game-text {
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 16px;
+}
+
+button {
+    border: 2px solid rgb(0, 23, 50);
+    font-size: 24px;
+    font-family: 'Ruslan Display', sans-serif;
+    text-transform: uppercase;
+    padding: 4px 20px 8px 20px;
+    cursor: pointer;
+
+}
+
+button :hover {
+    background-color: rgb(203, 224, 221);
+
+}
+
+.hidden {
+    display: none;
+}
